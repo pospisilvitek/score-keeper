@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Score Keeper</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
+    </head>
+    <body>
+        <div id="app">
+            <div id="hero-images">
+                <img src="images/left_img.jpg" id="left-img">
+                <img src="images/right_img.jpg" id="right-img">
+            </div>
+            <p id="project-name">Score Keeper</p>
+            <div id="scoreboard">
+                <span id="score-counter">
+                    <span id="left-counter">0</span>
+                    <span>to</span>
+                    <span id="right-counter">0</span>
+                </span>
+                <span id="winner-text"></span>
+                <span id="timer">00:00</span>
+            </div>
+            <p id="tutorial">Select the game length and use the buttons below to adjust the score.</p>
+            <label id="game-length" for="game-length-select">Game length:</label>
+            <select name="length" id="game-length-select">
+                <option value="5" selected>5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="25">25</option>
+                <option value="1000000">inf</option>
+            </select>
+            <div id="controls">
+                <span>
+                    <button id="p1-plus" data-type="p1" class="left-btn">+1 Player One</button>
+                    <button id="p1-minus" data-type="p1" class="right-btn">-1</button>
+                </span>
+                <span>
+                    <button id="p2-plus" data-type="p2" class="left-btn">+1 Player Two</button>
+                    <button id="p2-minus" data-type="p2" class="right-btn">-1</button>
+                </span>
+                <span>
+                    <button id="start" data-type="start" class="left-btn">Start</button>
+                    <button id="pause" data-type="pause" class="left-btn right-btn">Pause</button>
+                    <button id="reset" data-type="reset" class="right-btn">Reset</button>
+                </span>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>

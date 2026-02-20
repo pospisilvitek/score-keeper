@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', Arial;
+    font-weight: 600;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; 
+    padding: 50px 0;
+}
+
+#app {
+    width: 85%;
+    max-width: 815px;
+}
+
+#hero-images {
+    display: flex;
+    justify-content: center;
+}
+
+#left-img, 
+#right-img {
+    width: 45%;
+}
+
+#project-name, 
+#game-length, 
+#tutorial {
+    font-size: 20px;
+}
+
+#score-counter, 
+#timer, 
+#winner-text {
+    font-size: 40px;
+}
+
+#scoreboard {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+#score-counter {
+    display: flex;
+    gap: 5px
+}
+
+#winner-text {
+    text-align: center;
+}
+
+#timer {
+    font-variant-numeric: tabular-nums;
+}
+
+#tutorial {
+    padding-bottom: 10px;
+}
+
+#game-length-select {
+    cursor: pointer;
+    font: inherit;
+    width: 80px;
+    height: 30px;
+    background-color: lightgray;
+    border: none;
+    border-radius: 8px;
+    padding: 0 10px;
+    margin-left: 8px;
+    margin-bottom: 15px;
+}
+
+#controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+#controls span {
+    display: flex;
+    gap: 4px;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+    background-color: lightgray;
+    color: white;
+    padding: 0.7em 1.1em;
+    border-radius: 8px;
+    font-size: 20px;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    touch-action: manipulation;
+}
+
+button:hover {
+    opacity: 0.75;
+}
+
+button:active {
+    opacity: 1;
+}
+
+.left-btn {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.right-btn {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 25px;
+    }
+
+    #project-name, 
+    #game-length, 
+    #tutorial,
+    button {
+        font-size: 16px;
+    }
+
+    #score-counter, 
+    #timer, 
+    #winner-text {
+        font-size: 32px;
+    }
+
+    button {
+        padding: 0.8em 1.2em;
+    }
+}
+
+@media (max-width: 640px) {
+    #winner-text {
+        display: none;
+    }
+
+    #right-img {
+        display: none;
+    }
+
+    #left-img {
+        width: 70%;
+    }
+}
+
+@media (max-width: 480px) {
+    #left-img {
+        width: 80%;
+    }
+}
+
+[data-type="p1"].active {
+    background-color: #3298DC;
+}
+
+[data-type="p2"].active {
+    background-color: #9D4EDD;
+}
+
+[data-type="start"].active {
+    background-color: #04D1B2;
+}
+
+[data-type="pause"].active {
+    background-color: #FF9F43;
+}
+
+[data-type="reset"].active {
+    background-color: #F24667;
+}
+
+.active {
+    pointer-events: auto;
+}
+
+.disabled {
+    background-color: lightgray;
+    pointer-events: none;
+}
+
+.winner-color {
+    color: #04D1B2;
+}
+
+.loser-color {
+    color: #F24667;
+}
+
+.visible {
+    display: block;
+}
+
+.invisible {
+    display: none;
+}
+
+.disabled-text {
+    color: lightgray;
+}
